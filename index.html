@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <header>
+        <nav class="nav">
+          <ul class="nav-list">
+                <li><a href="#">See my work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+    </div>
+      
+    <div class="container">
+      
+      <section data-textcolor="#bcb8ad" data-bgcolor="#032f35">
+        <div>
+          <h1>
+            <span
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-1"
+              >Stas</span
+            >
+            <span
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-2"
+              >Shokarev</span
+            >
+            <span
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-3"
+              >35mm portfolio</span
+            >
+          </h1>
+          <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
+            with GSAP ScrollTrigger & Locomotive Scroll.
+          </p>
+        </div>
+      </section>
+      <section
+        class="horizontal-scroll"
+        data-textcolor="#bcb8ad"
+        data-bgcolor="#815946"
+      >
+        <div class="pin-wrap">
+          <h2>This whole horizontal section should be brown</h2>
+          <img
+            src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+            alt=""
+          />
+          <img
+            src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+            alt=""
+          />
+          <img
+            src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+            alt=""
+          />
+        </div>
+      </section>
+      <section data-textcolor="#032f35" data-bgcolor="#bcb8ad">
+        <div>
+          <h2 data-scroll data-scroll-speed="1">
+            <span>This should be a light cream background</span>
+          </h2>
+        </div>
+      </section>
+
+      <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+        <img
+          src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt=""
+        />
+        <h2 data-scroll data-scroll-speed="1">
+          This should be a pink background
+        </h2>
+      </section>
+      <section
+        class="horizontal-scroll"
+        data-textcolor="#bcb8ad"
+        data-bgcolor="#815946"
+      >
+        <div class="pin-wrap">
+          <h2>This whole horizontal section should be brown</h2>
+          <img
+            src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+            alt=""
+          />
+          <img
+            src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+            alt=""
+          />
+          <img
+            src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+            alt=""
+          />
+        </div>
+      </section>
+      <section data-textcolor="#032f35" data-bgcolor="#bcb8ad">
+        <div>
+          <h2 data-scroll data-scroll-speed="1">
+            <span>This should be a light cream background</span>
+          </h2>
+        </div>
+      </section>
+
+      <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+        <img
+          src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt=""
+        />
+        <h2 data-scroll data-scroll-speed="1">
+          This should be a pink background
+        </h2>
+      </section>
+    </div>
+    <!-- Load GSAP and its plugins -->
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+    <!-- Load Locomotive Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
