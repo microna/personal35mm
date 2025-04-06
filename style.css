@@ -1,9 +1,15 @@
 :root {
     --text-color: #111;
     --bg-color: #b9b3a9;
-  }
-  
-  body {
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
     font-family: termina, sans-serif;
     color: var(--text-color);
     background: var(--bg-color);
@@ -12,18 +18,18 @@
     max-width: 100%;
     width: 100%;
     overscroll-behavior: none;
-  }
+}
 
-  a{
+a {
     text-decoration: none;
     color: inherit;
-  }
+}
 
-  ul{
+ul {
     list-style: none;
-  }
-  
-  section:not(.horizontal-scroll) {
+}
+
+section:not(.horizontal-scroll, .about) {
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -33,27 +39,55 @@
     padding: 50px 10vw;
     margin: auto;
     place-items: center;
-  }
+}
 
-  .container-fluid {
+.about {
+    padding: 100px 0;
+    min-height: 100vh;
     max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .nav-list{
+    margin: auto;
     display: flex;
-    align-self: start;
-    justify-content: flex-end;
-    width: 100%;
-  }
-  
-  img {
+    align-items:flex-start;
+    justify-content: center;
+    
+}
+
+.about__header{
+    width: 33.333%;
+}
+
+.about__header h6{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.about__content{
+    max-width: 750px;
+}
+.about__content h3{
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.about__content p{
+    font-size: 1.5rem;
+}
+
+
+
+img {
     height: 80vh;
     width: auto;
     object-fit: cover;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 5rem;
     line-height: 1;
     font-weight: 800;
@@ -64,57 +98,88 @@
     z-index: 4;
     overflow-wrap: break-word;
     hyphens: auto;
-  
+
     @media (max-width: 768px) {
-      font-size: 16vw;
+        font-size: 16vw;
     }
-  
+
     span {
-      display: block;
+        display: block;
     }
-  }
-  
-  h2 {
+}
+
+h2 {
     font-size: 2rem;
     max-width: 400px;
-  }
-  
-  .credit {
+}
+
+.credit {
     font-family: Termina, sans-serif;
+
     a {
-      color: var(--text-color);
+        color: var(--text-color);
     }
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .horizontal-scroll {
+}
+
+
+
+.horizontal-scroll {
     height: 100vh;
     overflow: hidden;
     display: flex;
     left: 0;
-  }
-  
-  .pin-wrap {
+}
+
+.pin-wrap {
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 50px 10vw;
-  
-    & > * {
-      min-width: 60vw;
-      padding: 0 5vw;
+
+    &>* {
+        min-width: 60vw;
+        padding: 0 5vw;
     }
-  }
-  
-  p {
+}
+
+.text-pin {
     position: absolute;
     bottom: 10vw;
     right: 10vw;
     width: 200px;
     line-height: 1.5;
-  }
-  
+}
+
+
+
+
+.nav-list {
+    display: flex;
+    align-self: start;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav-list a {
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+.nav-container {
+    height: 80px;
+    padding: 20px 10vw;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sub-title {
+    font-family: 'GT America Expanded', sans-serif;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}

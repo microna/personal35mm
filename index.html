@@ -11,20 +11,16 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container-fluid">
-        <header>
-        <nav class="nav">
-          <ul class="nav-list">
-                <li><a href="#">See my work</a></li>
-                <li><a href="#">Contact Me</a></li>
-              
-            </ul>
-        </nav>
-    </header>
-    </div>
-      
     <div class="container">
-      
+      <header>
+        <nav class="nav-container">
+          <ul class="nav-list">
+            <li><a href="#">See my work</a></li>
+            <li><a href="#">Contact Me</a></li>
+          </ul>
+        </nav>
+      </header>
+
       <section data-textcolor="#bcb8ad" data-bgcolor="#032f35">
         <div>
           <h1>
@@ -47,8 +43,14 @@
               >35mm portfolio</span
             >
           </h1>
-          <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
-            with GSAP ScrollTrigger & Locomotive Scroll.
+          <p
+            class="text-pin"
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-delay="0.2"
+          >
+            vision throught<br />
+            Kyiv 2a + Jupiter 8 lens
           </p>
         </div>
       </section>
@@ -58,7 +60,7 @@
         data-bgcolor="#815946"
       >
         <div class="pin-wrap">
-          <h2>This whole horizontal section should be brown</h2>
+          <h2>Chek out recent photos from the gallery</h2>
           <img
             src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
             alt=""
@@ -73,11 +75,29 @@
           />
         </div>
       </section>
-      <section data-textcolor="#032f35" data-bgcolor="#bcb8ad">
-        <div>
-          <h2 data-scroll data-scroll-speed="1">
-            <span>This should be a light cream background</span>
-          </h2>
+      <section class="about" data-textcolor="#032f35" data-bgcolor="#bcb8ad">
+        <div class="about__header">
+          <h6 class="" data-scroll data-scroll-speed="1">Hi, I'm Stas</h6>
+        </div>
+
+        <div class="about__content">
+          <h3 data-scroll data-scroll-speed="1">
+            My focus on creativity to bolster my expertise in photography
+          </h3>
+          <p>
+            My impactful & memorable brands by combining top-tier design, data &
+            strategy. We maximise the impact of your marketing with websites &
+            design rooted in the goals of your business and needs of your
+            customers. We’re all about helping you stand out in the best
+            possible way.
+          </p>
+          <p>
+            My impactful & memorable brands by combining top-tier design, data &
+            strategy. We maximise the impact of your marketing with websites &
+            design rooted in the goals of your business and needs of your
+            customers. We’re all about helping you stand out in the best
+            possible way.
+          </p>
         </div>
       </section>
 
@@ -86,9 +106,7 @@
           src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt=""
         />
-        <h2 data-scroll data-scroll-speed="1">
-          This should be a pink background
-        </h2>
+        <h2 data-scroll data-scroll-speed="1">Hi, I'm Stas</h2>
       </section>
       <section
         class="horizontal-scroll"
@@ -111,22 +129,22 @@
           />
         </div>
       </section>
-      <section data-textcolor="#032f35" data-bgcolor="#bcb8ad">
+      <!-- <section data-textcolor="#032f35" data-bgcolor="#bcb8ad">
         <div>
           <h2 data-scroll data-scroll-speed="1">
             <span>This should be a light cream background</span>
           </h2>
         </div>
-      </section>
+      </section> -->
 
       <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+        <h2 data-scroll data-scroll-speed="1">
+          This should be a pink background 123
+        </h2>
         <img
           src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt=""
         />
-        <h2 data-scroll data-scroll-speed="1">
-          This should be a pink background
-        </h2>
       </section>
     </div>
     <!-- Load GSAP and its plugins -->
