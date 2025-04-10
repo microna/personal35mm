@@ -112,7 +112,8 @@ controls.enableDamping = true; // Add smooth damping effect
 controls.dampingFactor = 0.05;
 controls.enableZoom = false; // Disable zooming
 controls.enablePan = true; // Allow panning
-controls.autoRotate = false; // Disable auto-rotation
+controls.autoRotate = true; // Enable auto-rotation
+controls.autoRotateSpeed = 1.0; // Set a slow rotation speed (default is 2.0)
 
 //Render the scene
 function animate() {
@@ -127,7 +128,7 @@ function animate() {
   }
 
   // Update controls in each frame
-  controls.update();
+  controls.update(); // This will handle the auto-rotation
 
   renderer.render(scene, camera);
 }
