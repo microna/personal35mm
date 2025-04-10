@@ -186,3 +186,19 @@ h2 {
     letter-spacing: 2px;
     margin-bottom: 1rem;
 }
+
+footer {
+    height: 100px;
+    
+    background: var(--bg-color);
+}
+
+.footer-wrapper{
+    padding: 20px 0;
+    margin: auto;
+   width: 80%;
+}
+
+.footer-title{
+    font-size: 1.5rem;
+}
