@@ -61,18 +61,27 @@
       >
         <div class="pin-wrap">
           <h2>Chek out recent photos from the gallery</h2>
-          <img
-            src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
-          <img
-            src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
-          <img
-            src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
+          <div class="photo-item">
+            <img
+              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt=""
+            />
+            <h4>F/W 2004</h4>
+          </div>
+          <div class="photo-item">
+            <img
+              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt=""
+            />
+            <h4>F/W 2004</h4>
+          </div>
+          <div class="photo-item">
+            <img
+              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt=""
+            />
+            <h4>F/W 2004</h4>
+          </div>
         </div>
       </section>
       <section class="about" data-textcolor="#032f35" data-bgcolor="#bcb8ad">
@@ -102,10 +111,13 @@
       </section>
 
       <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
-        <img src="camera.png" alt="" />
-        <h2 data-scroll data-scroll-speed="1">
-          My tool is a camera Kyiv 2a + Jupiter 8 lens made in 1968
-        </h2>
+        <div class="camera-wrapper">
+          <div id="container3D"></div>
+          <h2 data-scroll data-scroll-speed="1">
+            My tool is a camera Kyiv 2a + Jupiter 8 lens made in 1968
+          </h2>
+        </div>
+       
       </section>
       <section
         class="horizontal-scroll"
@@ -114,27 +126,30 @@
       >
         <div class="pin-wrap">
           <h2>Avalible photos for sale</h2>
-          <img
-            src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
-          <img
-            src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
-          <img
-            src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
+          <div class="photo-item">
+            <img
+              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt=""
+            />
+            <h4>F/W 2004</h4>
+          </div>
+          <div class="photo-item">
+            <img
+              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt=""
+            />
+            <h4>F/W 2004</h4>
+          </div>
+          <div class="photo-item">
+            <img
+              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt=""
+            />
+            <h4>F/W 2004</h4>
+          </div>
         </div>
       </section>
-      <section data-textcolor="#032f35" data-bgcolor="#bcb8ad">
-        <div>
-          <h2 data-scroll data-scroll-speed="1">
-            <span>This should be a light cream background</span>
-          </h2>
-        </div>
-      </section>
+      
 
       <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
         <h2 data-scroll data-scroll-speed="1">
@@ -145,7 +160,7 @@
           alt=""
         />
       </section>
-      <footer data-textcolor="#bcb8ad" data-bgcolor="#032f35"class="footer">
+      <footer data-textcolor="#bcb8ad" data-bgcolor="#032f35" class="footer">
         <div class="footer__wrapper">
           <div class="footer__column footer__column--primary">
             <h3 class="footer__title">
@@ -216,6 +231,8 @@
 
     <!-- Load Locomotive Scroll -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
     <script src="scripts.js"></script>
+    <script type="module" src="3dmodel.js"></script>
   </body>
 </html>
