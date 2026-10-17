@@ -1,3 +1,7 @@
+document.querySelectorAll("[data-current-year]").forEach((el) => {
+  el.textContent = new Date().getFullYear();
+});
+
 window.addEventListener("load", function () {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -85,6 +89,9 @@ window.addEventListener("load", function () {
 
   ScrollTrigger.addEventListener("refresh", () => scroller.update());
   ScrollTrigger.refresh();
+
+  // Heading sizes depend on the web font; re-measure pin lengths once it's in
+  document.fonts.ready.then(() => ScrollTrigger.refresh());
 
   // Refresh Locomotive + GSAP on resize; reload on breakpoint cross so
   // horizontal-scroll initialisation stays correct.

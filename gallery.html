@@ -143,11 +143,16 @@
           </p>
         </div>
         <div class="footer__copyright">
-          <span>© 2025 Stas Shokarev. All rights reserved.</span>
+          <span>© <span data-current-year>2025</span> Stas Shokarev. All rights reserved.</span>
           <a href="https://github.com/microna">GitHub</a>
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll("[data-current-year]").forEach((el) => {
+        el.textContent = new Date().getFullYear();
+      });
+    </script>
 
   </body>
 </html>

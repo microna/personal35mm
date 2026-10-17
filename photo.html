@@ -30,7 +30,15 @@
       <!-- Photo hero -->
       <section class="photo-hero">
         <div class="photo-hero__image-wrap">
-          <img src="image-placeholder.jpg" alt="Kyiv, 2024" class="photo-hero__img" />
+          <button type="button" class="photo-hero__open" id="openLightbox" aria-label="View photo full size">
+            <img
+              src="image-placeholder.jpg"
+              data-full="image-placeholder.jpg"
+              alt="Kyiv, 2024"
+              class="photo-hero__img"
+            />
+            <span class="photo-hero__hint" aria-hidden="true">View full size</span>
+          </button>
         </div>
         <div class="photo-hero__meta">
           <span class="section-label">01 — Gallery</span>
@@ -78,6 +86,27 @@
 
     </main>
 
+    <!-- Fullscreen viewer: opened by clicking the photo, driven by photo.js -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+      <div class="lightbox__stage" id="lightboxStage">
+        <img class="lightbox__img" id="lightboxImg" alt="" draggable="false" />
+        <p class="lightbox__status" aria-live="polite">Loading…</p>
+      </div>
+      <div class="lightbox__bar">
+        <p class="lightbox__hint">
+          <span class="lightbox__hint--pointer">Click or scroll to zoom · Drag to pan · Esc to close</span>
+          <span class="lightbox__hint--touch">Pinch or tap to zoom · Drag to pan</span>
+        </p>
+        <div class="lightbox__controls">
+          <button type="button" class="lightbox__btn" data-action="zoom-out" aria-label="Zoom out">−</button>
+          <span class="lightbox__zoom" id="lightboxZoom" aria-live="polite"></span>
+          <button type="button" class="lightbox__btn" data-action="zoom-in" aria-label="Zoom in">+</button>
+          <button type="button" class="lightbox__btn" data-action="fit">Fit</button>
+          <button type="button" class="lightbox__btn" data-action="close" aria-label="Close viewer">Close ✕</button>
+        </div>
+      </div>
+    </div>
+
     <footer data-textcolor="#bcb8ad" data-bgcolor="#032f35" class="footer">
       <div class="footer__wrapper">
         <div class="footer__column footer__column--primary">
@@ -93,11 +122,16 @@
           </p>
         </div>
         <div class="footer__copyright">
-          <span>© 2025 Stas Shokarev. All rights reserved.</span>
+          <span>© <span data-current-year>2025</span> Stas Shokarev. All rights reserved.</span>
           <a href="https://github.com/microna">GitHub</a>
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll("[data-current-year]").forEach((el) => {
+        el.textContent = new Date().getFullYear();
+      });
+    </script>
 
     <script src="photo.js"></script>
   </body>
