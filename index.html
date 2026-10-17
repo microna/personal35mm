@@ -1,28 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Stas Shokarev — 35mm Portfolio</title>
   </head>
   <body>
     <div class="container">
       <header>
         <nav class="nav-container">
+          <a href="#" class="nav-logo">S · S</a>
           <ul class="nav-list">
-            <li><a href="#">See my work</a></li>
-            <li><a href="#">Contact Me</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="mailto:kievonfire@gmail.com">Contact Me</a></li>
           </ul>
         </nav>
       </header>
 
-      <section data-textcolor="#bcb8ad" data-bgcolor="#032f35">
-        <div>
+      <section class="hero" data-textcolor="#bcb8ad" data-bgcolor="#032f35">
+        <div class="hero__inner">
           <h1>
             <span
               data-scroll
@@ -40,132 +50,249 @@
               data-scroll
               data-scroll-direction="horizontal"
               data-scroll-speed="-3"
-              >35mm portfolio</span
+              >35mm showcase</span
             >
           </h1>
-          <p
-            class="text-pin"
-            data-scroll
-            data-scroll-speed="2"
-            data-scroll-delay="0.2"
-          >
-            vision throught<br />
-            Kyiv 2a + Jupiter 8 lens
-          </p>
+          <div class="hero-scroll-hint">
+            <span>Scroll</span>
+          </div>
+          <span class="year-badge">Est. 2020</span>
+          <div class="text-pin">
+            <p>
+              Vision through<br />Kyiv 2a + Jupiter 8 lens
+            </p>
+            <a class="primary-button" href="gallery.html">See my work</a>
+          </div>
         </div>
       </section>
+
       <section
         class="horizontal-scroll"
         data-textcolor="#bcb8ad"
         data-bgcolor="#815946"
       >
         <div class="pin-wrap">
-          <h2>Chek out recent photos from the gallery</h2>
-          <div class="photo-item">
-            <img
-              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt=""
-            />
-            <h4>F/W 2004</h4>
+          <div class="pin-wrap__intro">
+            <span class="section-label">01 — Gallery</span>
+            <h2>Recent photos<br />from the field</h2>
           </div>
-          <div class="photo-item">
-            <img
-              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt=""
-            />
-            <h4>F/W 2004</h4>
-          </div>
-          <div class="photo-item">
-            <img
-              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt=""
-            />
-            <h4>F/W 2004</h4>
-          </div>
+          <a class="photo-item" href="photo.html">
+            <img src="image-placeholder.jpg" alt="Film photograph" />
+            <div class="photo-item-meta">
+              <h4>Kyiv, 2024</h4>
+              <span class="photo-item-num">01</span>
+            </div>
+          </a>
+          <a class="photo-item" href="photo.html">
+            <img src="image-placeholder.jpg" alt="Film photograph" />
+            <div class="photo-item-meta">
+              <h4>Kyiv, 2024</h4>
+              <span class="photo-item-num">02</span>
+            </div>
+          </a>
+          <a class="photo-item" href="photo.html">
+            <img src="image-placeholder.jpg" alt="Film photograph" />
+            <div class="photo-item-meta">
+              <h4>Kyiv, 2024</h4>
+              <span class="photo-item-num">03</span>
+            </div>
+          </a>
         </div>
       </section>
-      <section class="about" data-textcolor="#032f35" data-bgcolor="#bcb8ad">
+
+      <section class="about" data-textcolor="#1a1a14" data-bgcolor="#e8e2d9">
         <div class="about__header">
-          <h6 class="" data-scroll data-scroll-speed="1">Hi, I'm Stas</h6>
+          <h6 data-scroll data-scroll-speed="1">Hi, I'm Stas</h6>
         </div>
-
-        <div class="about__content">
-          <h3 data-scroll data-scroll-speed="1">
-            My focus on creativity to bolster my expertise in photography
-          </h3>
-          <p>
-            My impactful & memorable brands by combining top-tier design, data &
-            strategy. We maximise the impact of your marketing with websites &
-            design rooted in the goals of your business and needs of your
-            customers. We're all about helping you stand out in the best
-            possible way.
-          </p>
-          <p>
-            My impactful & memorable brands by combining top-tier design, data &
-            strategy. We maximise the impact of your marketing with websites &
-            design rooted in the goals of your business and needs of your
-            customers. We're all about helping you stand out in the best
-            possible way.
-          </p>
+        <div class="about__body">
+          <div class="about__content">
+            <h3 data-scroll data-scroll-speed="1">
+              My focus on creativity to bolster my expertise in photography
+            </h3>
+          </div>
+          <div class="about__text">
+            <p>
+              Shooting 35mm film through the streets of Kyiv with a vintage
+              Soviet camera. Every frame is a deliberate choice — light, shadow,
+              and the quiet moments between.
+            </p>
+            <p>
+              The Kyiv 2a paired with the Jupiter 8 lens creates a rendering
+              unlike any modern optic — a certain softness that digital cannot
+              replicate.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+      <section class="camera" data-bgcolor="#0d1f1a" data-textcolor="#bcb8ad">
+        <div class="camera-bg-year" aria-hidden="true">1968</div>
         <div class="camera-wrapper">
-          <div id="container3D"></div>
-          <h2 data-scroll data-scroll-speed="1">
-            My tool is a camera Kyiv 2a + Jupiter 8 lens made in 1968
-          </h2>
+          <div class="camera-text">
+            <span class="section-label">The Instrument</span>
+            <h2 data-scroll data-scroll-speed="1">
+              Kyiv 2a with Jupiter 8 lens — crafted in 1968
+            </h2>
+            <dl class="camera-specs">
+              <div class="camera-specs__item">
+                <dt>Format</dt>
+                <dd>35mm film</dd>
+              </div>
+              <div class="camera-specs__item">
+                <dt>Focal length</dt>
+                <dd>50mm</dd>
+              </div>
+              <div class="camera-specs__item">
+                <dt>Max aperture</dt>
+                <dd>f / 2.0</dd>
+              </div>
+              <div class="camera-specs__item">
+                <dt>Shutter range</dt>
+                <dd>1/25 – 1/500s</dd>
+              </div>
+              <div class="camera-specs__item">
+                <dt>Origin</dt>
+                <dd>USSR, 1968</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="model-frame">
+            <div class="model-frame__corners" aria-hidden="true"></div>
+            <div id="container3D"></div>
+          </div>
         </div>
-       
       </section>
+
       <section
         class="horizontal-scroll"
         data-textcolor="#bcb8ad"
         data-bgcolor="#815946"
       >
         <div class="pin-wrap">
-          <h2>Avalible photos for sale</h2>
-          <div class="photo-item">
-            <img
-              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt=""
-            />
-            <h4>F/W 2004</h4>
+          <div class="pin-wrap__intro">
+            <span class="section-label">02 — For Sale</span>
+            <h2>Prints available<br />for your walls</h2>
           </div>
-          <div class="photo-item">
-            <img
-              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt=""
-            />
-            <h4>F/W 2004</h4>
-          </div>
-          <div class="photo-item">
-            <img
-              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt=""
-            />
-            <h4>F/W 2004</h4>
-          </div>
+          <a class="photo-item" href="photo.html">
+            <img src="image-placeholder.jpg" alt="Film photograph for sale" />
+            <div class="photo-item-meta">
+              <h4>Kyiv, 2024</h4>
+              <span class="photo-item-num">01</span>
+            </div>
+          </a>
+          <a class="photo-item" href="photo.html">
+            <img src="image-placeholder.jpg" alt="Film photograph for sale" />
+            <div class="photo-item-meta">
+              <h4>Kyiv, 2024</h4>
+              <span class="photo-item-num">02</span>
+            </div>
+          </a>
+          <a class="photo-item" href="photo.html">
+            <img src="image-placeholder.jpg" alt="Film photograph for sale" />
+            <div class="photo-item-meta">
+              <h4>Kyiv, 2024</h4>
+              <span class="photo-item-num">03</span>
+            </div>
+          </a>
         </div>
       </section>
-      
 
-      <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
-        <h2 data-scroll data-scroll-speed="1">
-          This should be a pink background 123
-        </h2>
-        <img
-          src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt=""
-        />
+      <section class="featured" data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+        <div class="featured__text">
+          <h2 data-scroll data-scroll-speed="1">
+            Selected work available as fine art prints
+          </h2>
+          <p>
+            Each photograph is printed on archival baryta paper, signed and
+            numbered in an edition of 10.
+          </p>
+          <a href="mailto:kievonfire@gmail.com" class="primary-button">Enquire</a>
+        </div>
+        <div class="featured__image">
+          <img src="1.jpg" alt="Selected work" />
+        </div>
       </section>
+
+      <section class="support" data-bgcolor="#1c0f00" data-textcolor="#f5e6c8">
+        <div class="support__inner">
+          <span class="section-label">Support the work</span>
+          <h2 class="support__heading">
+            Film isn't free —<br />but your support keeps the shutter clicking
+          </h2>
+          <p class="support__sub">
+            Every coffee helps me buy another roll of film, develop it, and
+            share more of Kyiv through the lens.
+          </p>
+          <a
+            href="https://www.buymeacoffee.com/microna"
+            target="_blank"
+            rel="noopener"
+            class="support__btn"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 8h1a4 4 0 0 1 0 8h-1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <line
+                x1="6"
+                y1="1"
+                x2="6"
+                y2="4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="10"
+                y1="1"
+                x2="10"
+                y2="4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="14"
+                y1="1"
+                x2="14"
+                y2="4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            Buy me a coffee
+          </a>
+          <p class="support__note">36 shots per roll · each one counts</p>
+        </div>
+      </section>
+
       <footer data-textcolor="#bcb8ad" data-bgcolor="#032f35" class="footer">
         <div class="footer__wrapper">
           <div class="footer__column footer__column--primary">
             <h3 class="footer__title">
-              Let's create something amazing together
+              Let's create something<br />amazing together
             </h3>
+            <a href="mailto:kievonfire@gmail.com" class="footer__cta"
+              >Get in touch →</a
+            >
             <div class="footer__social">
               <a href="#" class="footer__social-link">
                 <svg
@@ -213,25 +340,22 @@
           </div>
           <div class="footer__column footer__column--secondary">
             <p class="footer__text">
-              We acknowledge the Traditional Owners and Custodians of the land
-              on which we live and work. We pay respects to Elders past, present
-              and emerging, and recognise their connection to the land.
-              Sovereignty was never ceded.
+              35mm film photography from Kyiv, Ukraine. Shooting on Kyiv 2a with
+              Jupiter 8 lens since 2020. Every frame tells a story of light and
+              shadow.
             </p>
           </div>
-          <p class="footer__copyright">
-            © 2025 Stas Shokarev | <a href="https://github.com/microna">Git</a>
-          </p>
+          <div class="footer__copyright">
+            <span>© 2025 Stas Shokarev. All rights reserved.</span>
+            <a href="https://github.com/microna">GitHub</a>
+          </div>
         </div>
       </footer>
     </div>
-    <!-- Load GSAP and its plugins -->
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-
-    <!-- Load Locomotive Scroll -->
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-
     <script src="scripts.js"></script>
     <script type="module" src="3dmodel.js"></script>
   </body>

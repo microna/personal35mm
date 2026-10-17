@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/
+
+# Playwright MCP artifacts
+.playwright-mcp/
+
+# Unused/scratch assets
+To-The-Trees-branding-1.jpg
+camera.png
+fb.svg

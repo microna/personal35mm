@@ -1,0 +1,166 @@
+/* ── Gallery page ── */
+.gallery-page {
+  background: #032f35;
+  color: #bcb8ad;
+  min-height: 100vh;
+}
+
+.gallery-main {
+  padding-top: 80px; /* nav */
+}
+
+/* ── Header ── */
+.gallery-header {
+  padding: 70px 8vw 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(188, 184, 173, 0.1);
+}
+
+.gallery-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  /* override global h1 positioning */
+  position: static;
+  top: auto;
+  left: auto;
+}
+
+.gallery-sub {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-top: 0.25rem;
+}
+
+/* ── Active nav link ── */
+.nav-active {
+  opacity: 1 !important;
+}
+.nav-active::after {
+  width: 100% !important;
+}
+
+/* ── Grid ── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 38vw;
+  gap: 2px;
+  padding: 2px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  background: #021f24;
+}
+
+.grid-item--tall {
+  grid-row: span 2;
+}
+
+.grid-item--wide {
+  grid-column: span 2;
+}
+
+/* Image */
+.grid-item__img-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.grid-item__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(15%);
+  transform: scale(1.03);
+  transition:
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    filter 0.5s ease;
+}
+
+.grid-item:hover .grid-item__img-wrap img {
+  transform: scale(1);
+  filter: grayscale(0%);
+}
+
+/* Overlay */
+.grid-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(2, 18, 20, 0.75) 0%, transparent 45%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.grid-item:hover .grid-item__overlay {
+  opacity: 1;
+}
+
+.grid-item__location {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #e8e2d9;
+}
+
+.grid-item__num {
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: #e8e2d9;
+  opacity: 0.5;
+}
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 52vw;
+  }
+
+  .grid-item--wide {
+    grid-column: span 2;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 540px) {
+  .gallery-header {
+    padding: 50px 5vw 35px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 48vw;
+    gap: 2px;
+  }
+
+  /* reset all spans on small screens for a clean 2-col flow */
+  .grid-item--tall,
+  .grid-item--wide {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  .grid-item__overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(2, 18, 20, 0.6) 0%, transparent 60%);
+  }
+}
